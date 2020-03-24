@@ -1,0 +1,25 @@
+{
+  "name": "bpmn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --content-base=public --open"
+  },
+  "author": "Gleb Lazarev",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
+    "raw-loader": "^0.5.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "diagram-js-minimap": "^1.2.1",
+    "bpmn-js": "^6.3.4"
+  }
+}
