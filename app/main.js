@@ -1,15 +1,20 @@
 import $ from 'jquery';
-import BpmnModeler from 'bpmn-js/lib/Modeler';
 import minimapModule from 'diagram-js-minimap';
+import BpmnJS from 'bpmn-js'
+
+const canvas = $('#canvas').get(0);
+canvas.style.visibility = 'hidden';
 
 $('#files').get(0).addEventListener('change', handleFileSelect, false);
 
-const viewer = new BpmnModeler({
-    container: $('#canvas'),
+const viewer = new BpmnJS({
+    container: canvas,
+    additionalModules: [
+        minimapModule
+    ]
 });
 
 function handleFileSelect(evt) {
-    console.log(evt);
     const files = evt.target.files;
 
     const reader = new FileReader();
@@ -22,8 +27,8 @@ function handleFileSelect(evt) {
             if (error) {
                 console.error(error);
             } else {
-                const canvas = viewer.get('canvas');
-                canvas.zoom('fit-viewport');
+                canvas.style.visibility = 'visible';
+                viewer.get('minimap').open();
             }
         });
     };
