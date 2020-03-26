@@ -1,0 +1,13 @@
+.djs-search-container,
+.bjs-powered-by {
+    display: none;
+}
+
+html,
+body {
+    height: 90vh !important;
+}
+
+#canvas {
+    height: 90%;
+}

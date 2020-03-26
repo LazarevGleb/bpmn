@@ -1,11 +1,10 @@
 {
   "name": "bpmn",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "bpmn files processing",
+  "main": "app/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build": "webpack --mode production",
     "start": "webpack-dev-server --content-base=public --open"
   },
   "author": "Gleb Lazarev",
